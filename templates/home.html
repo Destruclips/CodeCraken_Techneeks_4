@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <style>
+    .navbar {
+      background-color: #1d4e80;
+    }
+    
+    .navbar .navbar-brand {
+      font-weight: 600;
+      font-size: 200%;
+      padding: 10px 20px 10px;
+    }
+
+    .navbar .collapse a {
+      font-weight: 400;
+      font-family:cursive;
+      margin: 0 30px 0 0;
+      color: #ffffff;
+      border-radius: 6px;
+    }
+
+    .navbar .collapse a:hover {
+      box-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+    }
+
+    /* CARDS AND TITLE */
+
+    #bg {
+      background-image: url("/static/download.jpeg.jpeg");
+      background-size: cover;
+      height: 200%;
+    }
+
+    .container-fluid {
+      background-color: rgba(255, 255, 255, 0.25);
+      color: #d0dded;
+      text-align: center;
+      height: 100%;
+      padding: 0 0 30px 0;
+    }
+
+    .container-fluid strong {
+      font-weight: 750;
+    }
+
+    .container-fluid .row .big-heading {
+      padding: 30px 20px 20px 20px;
+    }
+
+    .container-fluid .row #statement {
+      padding: 0 0 5% 0;
+    }
+
+    .container-fluid .card {
+      width: 70%;
+      margin: 0 auto;
+    }
+
+    .container-fluid .card .btn {
+      background-color: #1d4e80;
+      color: #ffffff;
+      transition: transform 0.5s;
+    }
+
+    .container-fluid .card .btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* FOOTER */
+
+    #footer {
+      background-color: black;
+      color: white;
+    }
+
+    #footer p {
+      padding: 20px;
+    }
+    .image{
+      height: 110px;
+      width: 200px;
+      border-radius: 50%;
+      
+    }
+  </style>
+  <title>PredPlus | Test for diseases in the most effective way</title>
+</head>
+
+<body style="background-image: url('/static/download.jpeg.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+filter: blur(0.5px); 
+opacity: 1;">
+  <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a style="font-size:2.5rem" class="navbar-brand" href=""><img class="image" src="/static/logo.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul style="font-size:1.5rem"  class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- TITLE AND CARDS -->
+
+  <div id="bg">
+    <div class="container-fluid">
+      <div class="row">
+        <div style="color: black;" class="col-lg-12">
+          <h2 class="big-heading">WELCOME TO <strong>PredPlus</strong></h2><br>
+          <h4 id="statement">We are <strong>TechNeeks</strong> desiring to <strong>transform the
+              existing medical standards.</strong></h3>
+        </div>
+      </div>
+
+      <div class="row" id="car">
+        <div class="col-12 col-lg-6 col-md-12 mx-auto mb-4 ">
+          <div class="card">
+            <img src="/static/heart.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Heart Disease</h5>
+              <p class="card-text">The term “heart disease” refers to several types of heart conditions.
+                Sometimes heart disease may be “silent” and not diagnosed until a person experiences signs or symptoms
+                of a heart attack, heart failure, or an arrhythmia</p>
+              <a href="/heart-disease" class="btn">TEST</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 col-md126 mx-aut mb-4o">
+          <div class="card">
+            <img src="/static/covid.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Covid-19</h5>
+              <p class="card-text">COVID-19 is a highly contagious viral illness caused by the severe acute respiratory
+                syndrome coronavirus 2.
+                Symptoms of COVID-19 may include fever, cough, fatigue, loss of taste, muscle or body aches, sore
+                throat, etc.</p>
+              <a href="/covid" class="btn">TEST</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer id="footer">
+    <div style="color: beige;" class="container-fluid">
+      <p>© Copyright 2023 PredPlus</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

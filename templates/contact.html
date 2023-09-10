@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+      /* NAVBAR */
+      #image{
+      height: 110px;
+      width: 200px;
+      border-radius: 50%;
+      
+    }
+.navbar{
+    background-color: #1d4e80;
+}
+#footer{
+    background-color: #1d4e80;
+
+}
+
+.navbar .navbar-brand{
+    font-weight:700;
+    font-size: 200%; 
+    padding: 10px 20px 10px;
+}
+
+.navbar .collapse a{
+    font-weight: 500;
+    font-family:cursive;
+    margin: 0 30px 0 0;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.navbar .collapse a:hover{
+    box-shadow: 0 0 3px rgba(255,255,255,0.5);
+}
+
+/* CARDS AND TITLE */
+
+#bg{
+    background-size: cover;
+    height:200%;
+}
+
+.container-fluid{
+    background-color: rgba(255,255,255,0.25);
+    color:#d0dded;
+    text-align: center;
+    height:100%;
+    padding:0 0 2% 0;
+}
+
+.container-fluid strong{
+    font-weight:750;
+}
+
+.container-fluid .row .big-heading{
+    padding:1% 0 0.5% 0;
+}
+
+.container-fluid .row #statement{
+    padding:1% 0 0 0;
+    font-size: 20px;
+    color:#c9e1fc;
+}
+
+.container-fluid .card{
+    margin:10px;
+}
+
+.container-fluid .card .form-group{
+    margin:20px 0 0 0;
+}
+
+.container-fluid .card .btn{
+    background-color: #1d4e80;
+    color: #ffffff;
+    transition: transform 0.5s;
+    margin:20px 0 0 0;
+}
+
+.container-fluid .card .btn:hover{
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+
+#footer{
+    background-color: black;
+    color:white;
+}
+
+#footer p{
+    padding: 20px;
+}
+
+    </style>
+    <title>PredPlus | Contact</title>
+</head>
+<body style="background-image: url('/static/download.jpeg.jpeg');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+filter: blur(0.5px); 
+opacity: 1;">
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a style="font-size:2.5rem" class="navbar-brand" href=""><img id="image" src="/static/logo.png" alt=""/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul style="font-size:1.5rem" class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">HOME</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">CONTACT</a>
+              </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- TITLE AND CARDS -->
+
+    <div id="bg">
+      <div class="container-fluid">
+        <div style="color:black;margin-top: 40px;" class="row">
+          <h1>CONTACT US</h1>
+          <p>Feel free to reach out to us for any query</p>
+        </div> 
+
+        <!-- CARD -->
+        <div class="row">
+          <div class="col-12 col-lg-6 col-md-12 mx-auto">
+            <div class="card text-left" width="18rem">
+              <img src="/static/question.jpg" class="card-img-top">
+              <div class="card-body">
+                <form action="/contact" method="post">
+                  {% csrf_token %}
+                  <div class="form-group">
+                    <label for="input-name"><b>Name</b></label>
+                    <input type="text" class="form-control" name="name" id="input-name" placeholder="Enter name">
+                  </div>
+                  <div class="form-group">
+                    <label for="input-email"><b>Email</b></label>
+                    <input type="email" class="form-control" name="email" id="input-email" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="text-area"><b>Query</b></label>
+                    <textarea class="form-control" name="query" id="text-area" rows="5"></textarea>
+                  </div>
+                  <button class="btn" type="submit">SUBMIT</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+                
+                        
+            
+    
+  <!-- Footer -->
+  
+  <footer style="color: beige;" id="footer">
+    <div class="container-fluid">
+      <p>© Copyright 2023 PredPlus</p>
+    </div>
+  </footer>
+
+</body>
+</html>
